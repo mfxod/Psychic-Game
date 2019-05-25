@@ -1,12 +1,4 @@
-// psuedocode:
-// alert("Instructions")
-// assign comp's letter choice to a variable
-// let user guess up to 9 times
-// display user guesses in HTML
-// guessCounter-- in HTML
-// if user guess correctly: wins++ in HTML; reset 
-// if user doesn't guess within 9 tries: losses++ in HTML; reset
-
+// declare variables and reset function:
 
 var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
@@ -21,9 +13,6 @@ var lossesText = document.getElementById("losses-text");
 var guessesLeftText = document.getElementById("guesses-left-text");
 var yourGuessesText = document.getElementById("your-guesses-text");
 
-winsText.textContent = wins;
-lossesText.textContent = losses;
-
 function reset () {
     guessCounter = 9;
     guessesLeftText.textContent = guessCounter;
@@ -32,7 +21,16 @@ function reset () {
     compChoice = letters[Math.floor(Math.random() * letters.length)];
 }
 
+// reset everything and give user instructions:
+
+winsText.textContent = wins;
+lossesText.textContent = losses;
+
+alert("Press any letter key to guess. Good Luck!");
+
 reset();
+
+// define what happens when a key is pressed:
 
 document.onkeyup = function(event) {
     var letterGuess = event.key;
