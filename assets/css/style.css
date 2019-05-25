@@ -1,0 +1,31 @@
+.container {
+    padding-top: 5%;
+}
+
+
+
+body {
+    color: #c5b358;
+    background-color: #141414;
+}
+
+h1 {
+    font-family: 'Rye', cursive;
+    font-size: 2em;
+    color: lightgray;
+}
+
+.instruction {
+    font-family: 'Averia Serif Libre', Georgia, Times, "Times New Roman", serif;
+    font-size: 1.5em;
+}
+
+.section-title {
+    font-family: 'Averia Serif Libre', Georgia, Times, "Times New Roman", serif;
+    font-size: 1.25em;
+}
+
+.section-text {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: lightgray;
+}
