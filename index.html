@@ -5,15 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>The Psychic Game</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Averia+Serif+Libre|Rye&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>The Psychic Game</h1>
-    <p>Can you guess which letter I am thinking of?</p>
-    <p>Wins: <span id="wins-text"></span></p>
-    <p>Losses: <span id="losses-text"></span></p>
-    <p>Guesses left: <span id="guesses-left-text"></span></p>
-    <p>Your guesses: <span id="your-guesses-text"></span></p>
+    <div class="container">
+        <div class="row">
+            <img src="assets/images/crystal-ball.svg" class="img-fluid mx-auto" alt="Crystal Ball">
+        </div>
+
+        <div class="row text-center">
+            <div class="col-12">
+                <h1>The Psychic Game</h1>
+                <p class="instruction">Can you guess which letter I am thinking of?</p>
+            </div>
+        </div>
+
+        <div class="row text-center">
+            <div class="col-12">
+                <p class="section-title pt-4">Wins: <span class="section-text" id="wins-text"></span></p>
+            </div>
+
+            <div class="col-12">
+                <p class="section-title pt-4">Losses: <span class="section-text" id="losses-text"></span></p>
+            </div>
+
+            <div class="col-12">
+                <p class="section-title pt-4">Guesses left: <span class="section-text" id="guesses-left-text"></span></p>
+            </div>
+
+            <div class="col-12">
+                <p class="section-title pt-4">Your guesses: <span class="section-text" id="your-guesses-text"></span></p>
+            </div>
+
+        </div>
+    </div>
 </body>
 <script src="assets/javascript/game.js"></script>
 </html>
