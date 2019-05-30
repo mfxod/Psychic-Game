@@ -36,24 +36,29 @@ reset();
 // define what happens when a key is pressed:
 
 document.onkeyup = function(event) {
-    var letterGuess = event.key;
-
-    guessCounter--;
-    guessesLeftText.textContent = guessCounter;
-    userGuesses.push(letterGuess);
-    yourGuessesText.textContent = userGuesses.join(" "); 
-    // why doesn't this make counter go to zero and show 9th guess?
+    if(event.keyCode >= 65 && event.keyCode <= 90) {
     
-    if (letterGuess === compChoice) {
-        alert("You win! The correct answer is " + letterGuess + ".");
-        winsText.textContent = wins += 1;
-        reset();
-    }
-    // why does it have to be "+= 1" instead of "wins++"?
+        var letterGuess = event.key;
 
-    if (guessCounter === 0) {
-        alert("You lose. The correct answer was " + compChoice + ". Try again!");
-        lossesText.textContent = losses += 1;
-        reset();
+        guessCounter--;
+        guessesLeftText.textContent = guessCounter;
+        userGuesses.push(letterGuess);
+        yourGuessesText.textContent = userGuesses.join(" "); 
+        // why doesn't this make counter go to zero and show 9th guess?
+        
+        if (letterGuess === compChoice) {
+            alert("You win! The correct answer is " + letterGuess + ".");
+            winsText.textContent = wins += 1;
+            reset();
+        }
+        // why does it have to be "+= 1" instead of "wins++"?
+
+        if (guessCounter === 0) {
+            alert("You lose. The correct answer was " + compChoice + ". Try again!");
+            lossesText.textContent = losses += 1;
+            reset();
+        }
+    } else {
+        alert("Please press a letter key to guess.")
     }
 }
